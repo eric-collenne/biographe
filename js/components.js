@@ -11,6 +11,7 @@
     <a class="logo" href="${base}index.html">Sillon de <span>Vie</span></a>
     <ul class="nav-links">
       <li><a href="${base}index.html">Accueil</a></li>
+      <li><a href="${base}a-propos.html">À propos</a></li>
       <li class="dropdown">
         <a href="${base}prestations/index.html">Prestations ▾</a>
         <div class="dropdown-menu">
@@ -33,6 +34,7 @@
   </header>
   <nav class="mobile-nav" id="mobile-nav">
     <a href="${base}index.html">Accueil</a>
+    <a href="${base}a-propos.html">À propos</a>
     <a href="${base}prestations/index.html">Toutes les prestations</a>
     <a href="${base}prestations/biographie-de-vie.html" class="mobile-sub">Biographie de vie</a>
     <a href="${base}prestations/biographie-a-deux.html" class="mobile-sub">Biographie à deux</a>

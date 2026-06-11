@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>À propos — Sillon de Vie · Éric Collenne, biographe</title>
+  <meta name="description" content="Éric Collenne est biographe narrateur installé dans les Vosges, près d'Épinal. Il accompagne des personnes dans l'écriture de leur histoire." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .apropos-grid {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .apropos-photo {
+      position: relative;
+    }
+    .apropos-photo img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: top;
+      filter: sepia(10%) brightness(.95);
+      display: block;
+    }
+    .apropos-photo::after {
+      content: '';
+      position: absolute;
+      bottom: -1.5rem;
+      right: -1.5rem;
+      width: 60%;
+      height: 60%;
+      border: 2px solid var(--gold);
+      z-index: -1;
+    }
+    .apropos-photo-caption {
+      font-size: .75rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 1.2rem;
+    }
+
+    .apropos-text h2 {
+      margin-bottom: 1.2rem;
+    }
+
+    .apropos-text .intro-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.25rem;
+      line-height: 1.75;
+      color: var(--ink);
+      border-left: 3px solid var(--gold);
+      padding-left: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .apropos-text p {
+      font-size: .98rem;
+      line-height: 1.9;
+      color: var(--muted);
+      margin-bottom: 1.3rem;
+    }
+
+    .apropos-text hr {
+      border: none;
+      border-top: 1px solid var(--warm);
+      margin: 2rem 0;
+    }
+
+    .valeurs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .valeur {
+      padding: 2rem 1.8rem;
+      background: var(--parchment);
+      border-top: 2px solid var(--gold);
+      text-align: center;
+    }
+    .valeur-icon { font-size: 1.8rem; margin-bottom: .8rem; }
+    .valeur h3 { font-size: 1.05rem; margin-bottom: .4rem; }
+    .valeur p { font-size: .83rem; margin-bottom: 0; }
+
+    .livres-section { background: var(--parchment); }
+    .livres-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .livre-card {
+      padding: 2.5rem 2rem;
+      background: var(--white);
+      border-top: 2px solid var(--gold);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .livre-label {
+      font-size: .68rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .livre-card h3 {
+      font-size: 1.25rem;
+      line-height: 1.25;
+      margin-bottom: 0;
+    }
+    .livre-card p { font-size: .88rem; margin-bottom: 0; }
+    .livre-editeur {
+      font-size: .75rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: auto;
+    }
+
+    @media (max-width: 900px) {
+      .apropos-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .apropos-photo { max-width: 300px; margin: 0 auto; }
+      .apropos-photo::after { display: none; }
+      .livres-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <script src="js/components.js" data-depth="0"></script>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="index.html">Accueil</a><span>/</span><span>À propos</span></div>
+      <div class="page-hero-label">Qui suis-je ?</div>
+      <h1>Éric Collenne</h1>
+      <p class="page-hero-sub">Biographe narrateur dans les Vosges, près d'Épinal. J'accompagne des personnes dans l'écriture de leur histoire.</p>
+    </div>
+  </div>
+
+  <!-- PRÉSENTATION -->
+  <section>
+    <div class="container">
+      <div class="apropos-grid">
+
+        <div class="apropos-photo">
+          <img
+            src="https://www.sillondevie.fr/wp-content/uploads/2020/07/F121A942-1B5D-4FBB-B955-BC865B93F0A7_1_201_a.jpeg"
+            alt="Éric Collenne — Biographe narrateur, Vosges"
+          />
+          <p class="apropos-photo-caption">Éric Collenne · Biographe · Vosges</p>
+        </div>
+
+        <div class="apropos-text">
+          <div class="section-label">À propos</div>
+          <h2>Biographe dans les Vosges</h2>
+
+          <p class="intro-quote">« Je ne cherche pas à écrire à la place de quelqu'un. Ni à transformer une histoire. Je propose un cadre, une écoute, et un travail à partir de ce qui est là. »</p>
+
+          <p>Je suis biographe installé dans les Vosges, près d'Épinal. Je m'appelle Éric Collenne.</p>
+
+          <p>Avant d'accompagner l'écriture de récits de vie, j'ai travaillé dans le monde de l'entreprise, en tant que chercheur puis cadre. Cette expérience a profondément marqué mon regard sur le travail, les trajectoires professionnelles et les formes d'usure possibles.</p>
+
+          <hr />
+
+          <p>Avec le temps, l'écriture est devenue un espace central. Un espace pour comprendre, pour relier, parfois pour déposer ce qui ne trouvait pas sa place ailleurs.</p>
+
+          <p>J'ai écrit notamment un ouvrage sur le monde du travail et ses dérives — <em>La Méthode Michelin, comment rendre les salariés inaptes au travail</em> — qui a constitué une étape importante dans mon parcours et a abouti à une victoire judiciaire reconnaissant la faute inexcusable de Michelin.</p>
+
+          <hr />
+
+          <p>Aujourd'hui, j'accompagne des personnes dans l'écriture de leur histoire, ou d'une part de leur histoire. Cela peut être un récit de vie, une naissance, un parcours professionnel, une épreuve traversée, ou tout autre moment qui demande à être mis en mots.</p>
+
+          <p>Chaque accompagnement est différent, car chaque histoire l'est aussi.</p>
+
+          <a href="contact/index.html" class="btn btn-dark" style="margin-top:1.5rem;">Prendre contact</a>
+        </div>
+      </div>
+
+      <!-- VALEURS -->
+      <div style="margin-top:6rem;">
+        <div class="section-label">Ce qui guide mon travail</div>
+        <h2>Mes valeurs</h2>
+        <div class="valeurs-grid">
+          <div class="valeur">
+            <div class="valeur-icon">👂</div>
+            <h3>L'écoute</h3>
+            <p>Avant les mots, il y a ce qui cherche à se dire. Je prends le temps d'écouter, sans jugement, sans précipitation.</p>
+          </div>
+          <div class="valeur">
+            <div class="valeur-icon">🔒</div>
+            <h3>La confidentialité</h3>
+            <p>Tout ce qui est partagé dans le cadre de nos échanges reste strictement confidentiel. Vous restez maître de votre récit.</p>
+          </div>
+          <div class="valeur">
+            <div class="valeur-icon">✍️</div>
+            <h3>L'exigence</h3>
+            <p>Chaque texte est travaillé avec soin, relu, affiné. Votre histoire mérite les mots justes.</p>
+          </div>
+          <div class="valeur">
+            <div class="valeur-icon">🤝</div>
+            <h3>La confiance</h3>
+            <p>Un accompagnement biographique repose sur une relation de confiance qui se construit dans la durée.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MES LIVRES -->
+  <section class="livres-section">
+    <div class="container">
+      <div class="section-label">Auteur publié</div>
+      <h2>Mes ouvrages</h2>
+      <div class="livres-grid">
+        <div class="livre-card">
+          <div class="livre-label">Dernier ouvrage</div>
+          <h3>L'Amorce</h3>
+          <p>Un récit de bascule hanté par une question centrale : Pourquoi ? Né dans les Hautes-Vosges, ce texte suit une quête de réponses face à l'acte de partir. Préfacé par Marie de Hennezel.</p>
+          <div class="livre-editeur">Préface de Marie de Hennezel</div>
+        </div>
+        <div class="livre-card">
+          <div class="livre-label">Premier ouvrage</div>
+          <h3>La Méthode Michelin</h3>
+          <p>Comment rendre les salariés inaptes au travail. Un témoignage sans concession, suivi d'une victoire judiciaire reconnaissant la faute inexcusable de Michelin.</p>
+          <div class="livre-editeur">Éditions Plon</div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:3rem;">
+        <a href="https://auteur.eric-collenne.fr" target="_blank" class="btn btn-dark">Découvrir mes livres</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-band">
+    <div class="container">
+      <h2>Un premier échange, sans engagement</h2>
+      <p>Si vous souhaitez en savoir plus ou simplement échanger, contactez-moi. Nous prendrons le temps d'un premier échange.</p>
+      <a href="contact/index.html" class="btn btn-gold">Me contacter</a>
+    </div>
+  </div>
+</body>
+</html>
