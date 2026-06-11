@@ -3,588 +3,194 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sillon de Vie — Biographie & Récits de Vie · Éric Collenne</title>
-  <meta name="description" content="Éric Collenne vous accompagne dans l'écriture de votre histoire. Biographies personnalisées, récits de vie, témoignages. Basé dans les Vosges, Épinal." />
-
+  <title>Sillon de Vie — Biographe narrateur · Éric Collenne · Épinal, Vosges</title>
+  <meta name="description" content="Éric Collenne, biographe narrateur à Épinal. Je vous accompagne dans l'écriture de votre histoire : biographies de vie, récits d'aventures, biographies de naissance." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
-
+  <link rel="stylesheet" href="css/style.css" />
   <style>
-    :root {
-      --ink:      #1a1612;
-      --parchment:#f5f0e8;
-      --warm:     #e8ddd0;
-      --gold:     #8b6914;
-      --gold-lt:  #c9a84c;
-      --rust:     #7a3b2e;
-      --muted:    #6b6258;
-      --white:    #fdfaf5;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Jost', sans-serif;
-      background: var(--white);
-      color: var(--ink);
-      font-weight: 300;
-      overflow-x: hidden;
-    }
-
-    /* ── HEADER / NAV ── */
-    header {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 1.2rem 3rem;
-      background: rgba(253,250,245,0.92);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(139,105,20,0.15);
-      transition: box-shadow .3s;
-    }
-    header.scrolled { box-shadow: 0 2px 24px rgba(26,22,18,0.08); }
-
-    .logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
-      font-weight: 400;
-      letter-spacing: .04em;
-      color: var(--ink);
-      text-decoration: none;
-    }
-    .logo span { color: var(--gold); }
-
-    nav { display: flex; gap: 2rem; align-items: center; }
-    nav a {
-      font-size: .8rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      text-decoration: none;
-      transition: color .25s;
-    }
-    nav a:hover { color: var(--gold); }
-
-    .nav-cta {
-      padding: .55rem 1.4rem;
-      border: 1px solid var(--gold);
-      border-radius: 2px;
-      color: var(--gold) !important;
-      transition: background .25s, color .25s !important;
-    }
-    .nav-cta:hover { background: var(--gold); color: var(--white) !important; }
-
     /* ── HERO ── */
     .hero {
       min-height: 100vh;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      padding-top: 72px;
+      padding-top: 68px;
       position: relative;
       overflow: hidden;
     }
-
     .hero-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 6rem 4rem 6rem 5rem;
-      position: relative;
-      z-index: 2;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 5rem 4rem 5rem 5rem;
+      position: relative; z-index: 2;
     }
-
     .hero-eyebrow {
-      font-size: .72rem;
-      letter-spacing: .22em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.8rem;
-      display: flex;
-      align-items: center;
-      gap: .8rem;
+      font-size: .7rem; letter-spacing: .22em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.8rem;
+      display: flex; align-items: center; gap: .8rem;
     }
-    .hero-eyebrow::before {
-      content: '';
-      display: block;
-      width: 2.5rem;
-      height: 1px;
-      background: var(--gold);
-    }
-
-    h1 {
+    .hero-eyebrow::before { content: ''; display: block; width: 2.5rem; height: 1px; background: var(--gold); }
+    .hero h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(3rem, 5vw, 5rem);
-      font-weight: 300;
-      line-height: 1.08;
-      letter-spacing: -.01em;
-      margin-bottom: 2rem;
-      color: var(--ink);
+      font-size: clamp(3rem, 5vw, 5.5rem);
+      font-weight: 300; line-height: 1.06; letter-spacing: -.01em;
+      margin-bottom: 2rem; color: var(--ink);
     }
-    h1 em {
-      font-style: italic;
-      color: var(--rust);
-    }
-
+    .hero h1 em { font-style: italic; color: var(--rust); }
     .hero-sub {
-      font-size: 1.05rem;
-      line-height: 1.75;
-      color: var(--muted);
-      max-width: 440px;
-      margin-bottom: 3rem;
+      font-size: 1rem; line-height: 1.8; color: var(--muted);
+      max-width: 440px; margin-bottom: 3rem;
     }
-
-    .btn {
-      display: inline-block;
-      padding: .85rem 2.4rem;
-      background: var(--ink);
-      color: var(--white);
-      text-decoration: none;
-      font-size: .78rem;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      transition: background .3s, transform .2s;
-      align-self: flex-start;
-    }
-    .btn:hover { background: var(--rust); transform: translateY(-2px); }
-
-    .btn-outline {
-      background: transparent;
-      border: 1px solid var(--ink);
-      color: var(--ink);
-      margin-left: 1rem;
-    }
-    .btn-outline:hover { background: var(--ink); color: var(--white); }
-
-    .hero-image {
-      position: relative;
-      overflow: hidden;
-    }
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .hero-image { position: relative; overflow: hidden; }
+    .hero-image img { width: 100%; height: 100%; object-fit: cover; filter: sepia(18%) brightness(.92); }
     .hero-image::after {
-      content: '';
-      position: absolute; inset: 0;
-      background: linear-gradient(105deg, rgba(253,250,245,0.4) 0%, transparent 60%);
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(105deg, rgba(253,250,245,.35) 0%, transparent 60%);
     }
-    .hero-image img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      filter: sepia(20%) brightness(0.92);
-    }
-
     .hero-quote {
-      position: absolute;
-      bottom: 3rem;
-      left: 4rem;
-      max-width: 320px;
-      padding: 1.5rem 2rem;
-      background: rgba(253,250,245,0.95);
+      position: absolute; bottom: 3rem; left: 3rem; max-width: 300px;
+      padding: 1.4rem 1.8rem;
+      background: rgba(253,250,245,.95);
       border-left: 3px solid var(--gold);
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1rem;
-      font-style: italic;
-      color: var(--muted);
-      line-height: 1.6;
-      z-index: 3;
+      font-size: .95rem; font-style: italic; color: var(--muted);
+      line-height: 1.6; z-index: 3;
     }
 
-    /* ── SECTION GÉNÉRIQUE ── */
-    section { padding: 6rem 0; }
-
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 3rem; }
-
-    .section-label {
-      font-size: .7rem;
-      letter-spacing: .22em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1rem;
+    /* ── STATS ── */
+    .stats { background: var(--ink); padding: 3rem 0; }
+    .stats-inner {
+      max-width: 1100px; margin: 0 auto; padding: 0 3rem;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      divide-x: 1px solid rgba(253,250,245,.1);
     }
-
-    h2 {
+    .stat-item {
+      text-align: center; padding: 1rem 2rem;
+      border-right: 1px solid rgba(253,250,245,.1);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.2rem, 3.5vw, 3.2rem);
-      font-weight: 300;
-      line-height: 1.15;
-      color: var(--ink);
-      margin-bottom: 1.5rem;
+      font-size: 2.8rem; font-weight: 300; color: var(--gold-lt);
+      line-height: 1;
     }
+    .stat-label { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(253,250,245,.45); margin-top: .4rem; }
 
     /* ── POURQUOI ── */
     .why { background: var(--parchment); }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
     .why-lead {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.35rem;
-      font-style: italic;
-      line-height: 1.65;
-      color: var(--muted);
-      margin-bottom: 2rem;
+      font-size: 1.3rem; font-style: italic; line-height: 1.7;
+      color: var(--muted); margin-bottom: 1.5rem;
+      border-left: 3px solid var(--gold); padding-left: 1.5rem;
     }
-
-    .why-cards {
-      display: grid;
-      gap: 1.5rem;
-    }
-
+    .why-cards { display: grid; gap: 1.2rem; }
     .why-card {
-      padding: 1.8rem 2rem;
-      background: var(--white);
+      padding: 1.6rem 2rem; background: var(--white);
       border-top: 2px solid var(--gold);
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity .5s, transform .5s;
     }
-    .why-card.visible { opacity: 1; transform: none; }
-    .why-card:nth-child(2) { transition-delay: .1s; }
-    .why-card:nth-child(3) { transition-delay: .2s; }
+    .why-card h3 { font-size: 1.05rem; margin-bottom: .4rem; }
+    .why-card p { font-size: .85rem; margin-bottom: 0; }
 
-    .why-card h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: .5rem;
-      color: var(--ink);
+    /* ── PRESTATIONS GRID ── */
+    .presta-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 2px; margin-top: 3rem;
     }
-
-    .why-card p {
-      font-size: .9rem;
-      line-height: 1.7;
-      color: var(--muted);
+    .presta-card {
+      padding: 2.2rem 2rem; background: var(--warm);
+      text-decoration: none; color: inherit;
+      transition: background .3s; position: relative; overflow: hidden;
+      display: block;
     }
-
-    /* ── PRESTATIONS ── */
-    .prestations-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 2px;
-      margin-top: 3rem;
-    }
-
-    .presta-item {
-      padding: 2.5rem 2rem;
-      background: var(--warm);
-      cursor: default;
-      transition: background .3s;
-      position: relative;
-      overflow: hidden;
-    }
-    .presta-item::before {
+    .presta-card::before {
       content: attr(data-num);
-      position: absolute;
-      top: -1rem;
-      right: 1rem;
+      position: absolute; top: -1rem; right: 1rem;
       font-family: 'Cormorant Garamond', serif;
-      font-size: 5rem;
-      font-weight: 300;
-      color: rgba(139,105,20,0.12);
-      line-height: 1;
+      font-size: 5rem; font-weight: 300;
+      color: rgba(139,105,20,.1); line-height: 1;
     }
-    .presta-item:hover { background: var(--ink); }
-    .presta-item:hover h3,
-    .presta-item:hover p { color: var(--white); }
-    .presta-item:hover .presta-icon { color: var(--gold-lt); }
-
-    .presta-icon {
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-      color: var(--gold);
-      transition: color .3s;
-    }
-
-    .presta-item h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: .6rem;
-      transition: color .3s;
-    }
-
-    .presta-item p {
-      font-size: .85rem;
-      line-height: 1.65;
-      color: var(--muted);
-      transition: color .3s;
-    }
+    .presta-card:hover { background: var(--ink); }
+    .presta-card:hover h3, .presta-card:hover p { color: var(--white); }
+    .presta-card h3 { font-size: 1.15rem; margin-bottom: .5rem; transition: color .3s; }
+    .presta-card p { font-size: .83rem; transition: color .3s; margin-bottom: 0; }
 
     /* ── TÉMOIGNAGES ── */
-    .temoignages { background: var(--ink); color: var(--white); }
-    .temoignages .section-label { color: var(--gold-lt); }
+    .temoignages { background: var(--ink); }
     .temoignages h2 { color: var(--white); }
-
-    .temoignages-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-
-    .temoignage {
-      padding: 2.5rem;
-      border: 1px solid rgba(255,255,255,0.1);
-      position: relative;
-    }
+    .temoignages .section-label { color: var(--gold-lt); }
+    .temoignages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem; }
+    .temoignage { padding: 2.2rem; border: 1px solid rgba(255,255,255,.1); position: relative; }
     .temoignage::before {
       content: '\201C';
       font-family: 'Cormorant Garamond', serif;
-      font-size: 5rem;
-      line-height: 1;
-      color: var(--gold);
-      opacity: .5;
-      position: absolute;
-      top: .5rem;
-      left: 1.5rem;
+      font-size: 5rem; line-height: 1; color: var(--gold); opacity: .4;
+      position: absolute; top: .5rem; left: 1.5rem;
     }
-
     .temoignage p {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: 1rem;
-      line-height: 1.75;
-      color: rgba(253,250,245,0.8);
-      margin-bottom: 1.5rem;
-      padding-top: 1.5rem;
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-size: .98rem; line-height: 1.75;
+      color: rgba(253,250,245,.75); padding-top: 1.5rem; margin-bottom: 1.2rem;
     }
+    .temoignage-author strong { display: block; font-size: .8rem; color: var(--gold-lt); }
+    .temoignage-author span { font-size: .75rem; color: rgba(253,250,245,.35); text-transform: uppercase; letter-spacing: .08em; }
 
-    .temoignage-author { display: flex; flex-direction: column; gap: .2rem; }
-    .temoignage-author strong { font-size: .85rem; color: var(--gold-lt); letter-spacing: .06em; }
-    .temoignage-author span { font-size: .78rem; color: rgba(253,250,245,0.45); letter-spacing: .08em; text-transform: uppercase; }
-
-    /* ── ABOUT ── */
-    .about { background: var(--parchment); }
-
-    .about-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
-    }
-
-    .about-img {
-      position: relative;
-      aspect-ratio: 4/5;
-      overflow: hidden;
-    }
-    .about-img img { width: 100%; height: 100%; object-fit: cover; filter: sepia(15%); }
-    .about-img::after {
-      content: '';
-      position: absolute;
-      bottom: -1.5rem;
-      right: -1.5rem;
-      width: 60%;
-      height: 60%;
-      border: 2px solid var(--gold);
-      z-index: -1;
-    }
-
-    .about p {
-      font-size: 1rem;
-      line-height: 1.85;
-      color: var(--muted);
-      margin-bottom: 1.2rem;
-    }
-
-    /* ── CONTACT ── */
-    .contact-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: start;
-    }
-
-    .contact-info h2 { margin-bottom: 1rem; }
-    .contact-info p {
-      font-size: 1rem;
-      line-height: 1.8;
-      color: var(--muted);
-      margin-bottom: 2rem;
-    }
-
-    .contact-detail {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      margin-bottom: 1.2rem;
-    }
-    .contact-detail-icon {
-      width: 2.5rem;
-      height: 2.5rem;
-      border: 1px solid var(--gold);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      color: var(--gold);
-      font-size: 1rem;
-    }
-    .contact-detail-text strong {
-      display: block;
-      font-size: .75rem;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--ink);
-      margin-bottom: .2rem;
-    }
-    .contact-detail-text span {
-      font-size: .9rem;
-      color: var(--muted);
-    }
-
-    .contact-form { display: flex; flex-direction: column; gap: 1rem; }
-
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-
-    .form-group { display: flex; flex-direction: column; gap: .4rem; }
-
-    .form-group label {
-      font-size: .7rem;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .form-group input,
-    .form-group textarea {
-      padding: .9rem 1rem;
-      background: var(--parchment);
-      border: 1px solid var(--warm);
-      font-family: 'Jost', sans-serif;
-      font-size: .9rem;
-      color: var(--ink);
-      transition: border-color .25s;
-      outline: none;
-      resize: none;
-    }
-    .form-group input:focus,
-    .form-group textarea:focus { border-color: var(--gold); }
-
-    .form-note {
-      font-size: .78rem;
-      color: var(--muted);
-      font-style: italic;
-      margin-top: -.4rem;
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      background: var(--ink);
-      color: rgba(253,250,245,0.5);
-      padding: 3rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .footer-logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      color: var(--white);
-      text-decoration: none;
-    }
-    .footer-logo span { color: var(--gold-lt); }
-
-    footer p { font-size: .78rem; }
-
-    footer nav { gap: 1.5rem; }
-    footer nav a {
-      font-size: .75rem;
-      color: rgba(253,250,245,0.5);
-      text-decoration: none;
-    }
-    footer nav a:hover { color: var(--gold-lt); }
-
-    /* ── DÉFILEMENT ── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to   { opacity: 1; transform: none; }
-    }
-    .fade-up {
-      opacity: 0;
-      animation: fadeUp .8s ease forwards;
-    }
-    .delay-1 { animation-delay: .15s; }
-    .delay-2 { animation-delay: .3s; }
-    .delay-3 { animation-delay: .45s; }
-
-    /* ── MOBILE ── */
     @media (max-width: 768px) {
-      header { padding: 1rem 1.5rem; }
-      nav { display: none; }
       .hero { grid-template-columns: 1fr; min-height: auto; }
       .hero-text { padding: 4rem 1.5rem 3rem; }
       .hero-image { height: 55vw; }
       .hero-quote { display: none; }
-      .why-grid, .about-inner, .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-      .about-img::after { display: none; }
-      .container { padding: 0 1.5rem; }
-      .form-row { grid-template-columns: 1fr; }
-      footer { flex-direction: column; text-align: center; }
-      .btn-outline { margin-left: 0; margin-top: .8rem; }
+      .stats-inner { grid-template-columns: 1fr 1fr; }
+      .why-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     }
   </style>
 </head>
 <body>
-
-  <!-- HEADER -->
-  <header id="header">
-    <a class="logo" href="#">Sillon de <span>Vie</span></a>
-    <nav>
-      <a href="#pourquoi">À propos</a>
-      <a href="#prestations">Prestations</a>
-      <a href="#temoignages">Témoignages</a>
-      <a href="#contact" class="nav-cta">Me contacter</a>
-    </nav>
-  </header>
+  <script src="js/components.js" data-depth="0"></script>
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-text">
-      <div class="hero-eyebrow fade-up">Biographe &amp; Narrateur · Épinal, Vosges</div>
-      <h1 class="fade-up delay-1">
-        Un chemin,<br><em>un récit,</em><br>une trace.
-      </h1>
-      <p class="hero-sub fade-up delay-2">
-        J'accompagne des personnes dans l'écriture de leur histoire, ou d'un fragment de leur histoire. Récits de vie, naissances, relations, épreuves, passages importants. À votre rythme, pour mettre des mots sur ce qui cherche à se dire.
-      </p>
-      <div class="fade-up delay-3" style="display:flex; flex-wrap:wrap; gap:.5rem;">
-        <a href="#contact" class="btn">Parlez-moi de votre projet</a>
-        <a href="#prestations" class="btn btn-outline">Mes prestations</a>
+      <div class="hero-eyebrow">Biographe narrateur · Épinal, Vosges</div>
+      <h1>Un chemin,<br><em>un récit,</em><br>une trace.</h1>
+      <p class="hero-sub">J'accompagne des personnes dans l'écriture de leur histoire. Récits de vie, biographies, transmissions. À votre rythme, pour mettre des mots sur ce qui cherche à se dire.</p>
+      <div class="hero-btns">
+        <a href="prestations/index.html" class="btn btn-dark">Découvrir mes prestations</a>
+        <a href="contact/index.html" class="btn btn-outline">Me contacter</a>
       </div>
     </div>
     <div class="hero-image">
       <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=900&q=75&auto=format" alt="Écriture biographique" loading="lazy" />
       <blockquote class="hero-quote">
-        « Raconter sa vie n'est pas chose aisée. Les mots s'emmêlent, les pensées se croisent. Être accompagné permet de prendre le temps, autrement. »
+        « Raconter sa vie n'est pas chose aisée. Être accompagné permet de prendre le temps, autrement. »
       </blockquote>
     </div>
   </section>
 
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stats-inner">
+      <div class="stat-item"><div class="stat-num">8</div><div class="stat-label">Types de biographies</div></div>
+      <div class="stat-item"><div class="stat-num">15+</div><div class="stat-label">Années d'expérience</div></div>
+      <div class="stat-item"><div class="stat-num">2</div><div class="stat-label">Livres publiés</div></div>
+      <div class="stat-item"><div class="stat-num">∞</div><div class="stat-label">Histoires uniques</div></div>
+    </div>
+  </div>
+
   <!-- POURQUOI -->
-  <section class="why" id="pourquoi">
+  <section class="why">
     <div class="container">
       <div class="why-grid">
-        <div>
-          <div class="section-label">Pourquoi faire appel à un biographe ?</div>
+        <div class="reveal">
+          <div class="section-label">Pourquoi un biographe ?</div>
           <h2>Mettre des mots sur ce qui cherche à se dire</h2>
           <p class="why-lead">« Certaines choses restent difficiles à dire seul. Être accompagné dans cette démarche permet de prendre le temps, autrement, avec un regard extérieur attentif. »</p>
-          <p style="font-size:.95rem; line-height:1.8; color:var(--muted);">Éric Collenne vous accompagne avec écoute et empathie tout au long de l'écriture de votre histoire. Chaque récit est unique, traité avec respect et confidentialité.</p>
-          <br>
-          <a href="#contact" class="btn" style="margin-top:1rem;">Commencer l'aventure</a>
+          <p>Éric Collenne vous accompagne avec écoute et empathie tout au long de l'écriture de votre histoire. Chaque récit est unique, traité avec respect et confidentialité.</p>
+          <a href="prestations/index.html" class="btn btn-dark" style="margin-top:2rem;">Voir toutes les prestations</a>
         </div>
-        <div class="why-cards">
-          <div class="why-card">
-            <h3>Des récits de vie et des projets d'écriture</h3>
-            <p>Qu'il s'agisse d'une aventure, d'un parcours de vie, d'un témoignage ou d'une transmission, nous partons de ce que vous souhaitez raconter.</p>
-          </div>
+        <div class="why-cards reveal" style="transition-delay:.15s">
           <div class="why-card">
             <h3>Une écoute dans la durée</h3>
             <p>Un accompagnement au fil des rencontres, dans une attention à ce qui se dit et à ce qui cherche à se dire, sans précipitation.</p>
@@ -593,219 +199,87 @@
             <h3>Un cheminement dans l'écriture</h3>
             <p>Mise en mots au rythme du travail, sans modèle imposé, à partir de votre propre manière de raconter votre vie.</p>
           </div>
+          <div class="why-card">
+            <h3>Confidentialité totale</h3>
+            <p>Tout ce qui se dit dans le cadre de nos échanges reste strictement confidentiel. Vous restez maître de votre récit.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- PRESTATIONS -->
-  <section id="prestations">
+  <section>
     <div class="container">
-      <div class="section-label">Mes prestations</div>
-      <h2>Chaque histoire mérite d'être racontée</h2>
-      <div class="prestations-grid">
-        <div class="presta-item" data-num="01">
-          <div class="presta-icon">✦</div>
+      <div class="section-label reveal">Mes prestations</div>
+      <h2 class="reveal">Chaque histoire mérite d'être racontée</h2>
+      <div class="presta-grid">
+        <a class="presta-card reveal" href="prestations/biographie-de-vie.html" data-num="01">
           <h3>Biographie de vie</h3>
-          <p>Le récit complet de votre parcours, de vos origines à aujourd'hui. Une œuvre unique à transmettre.</p>
-        </div>
-        <div class="presta-item" data-num="02">
-          <div class="presta-icon">✦</div>
+          <p>Le récit complet de votre parcours, de vos origines à aujourd'hui.</p>
+        </a>
+        <a class="presta-card reveal" href="prestations/biographie-a-deux.html" data-num="02" style="transition-delay:.05s">
           <h3>Biographie à deux</h3>
-          <p>L'histoire d'une relation, d'un duo. Couple, amitié, collaboration créatrice.</p>
-        </div>
-        <div class="presta-item" data-num="03">
-          <div class="presta-icon">✦</div>
+          <p>L'histoire d'une relation, d'un duo. Couple, amitié, collaboration.</p>
+        </a>
+        <a class="presta-card reveal" href="prestations/biographie-de-naissance.html" data-num="03" style="transition-delay:.1s">
           <h3>Biographie de naissance</h3>
-          <p>Racontez les premiers jours, les premières émotions, le récit d'une arrivée au monde.</p>
-        </div>
-        <div class="presta-item" data-num="04">
-          <div class="presta-icon">✦</div>
+          <p>Racontez les premiers jours, les premières émotions d'une arrivée au monde.</p>
+        </a>
+        <a class="presta-card reveal" href="prestations/biographie-de-sportif.html" data-num="04" style="transition-delay:.15s">
           <h3>Biographie de sportif</h3>
-          <p>Votre parcours sportif, vos exploits, vos sacrifices et votre mental de champion.</p>
-        </div>
-        <div class="presta-item" data-num="05">
-          <div class="presta-icon">✦</div>
+          <p>Votre parcours sportif, vos exploits, votre mental de champion.</p>
+        </a>
+        <a class="presta-card reveal" href="prestations/recit-aventures.html" data-num="05" style="transition-delay:.2s">
           <h3>Récit d'aventures</h3>
-          <p>Voyages, explorations, expéditions. Mettre en mots l'extraordinaire de votre aventure.</p>
-        </div>
-        <div class="presta-item" data-num="06">
-          <div class="presta-icon">✦</div>
-          <h3>Bétalecture professionnelle</h3>
-          <p>Relecture critique et bienveillante de votre manuscrit avant publication ou partage.</p>
-        </div>
-        <div class="presta-item" data-num="07">
-          <div class="presta-icon">✦</div>
+          <p>Voyages, explorations, expéditions. Mettre en mots l'extraordinaire.</p>
+        </a>
+        <a class="presta-card reveal" href="prestations/betalecture.html" data-num="06" style="transition-delay:.25s">
+          <h3>Bétalecture</h3>
+          <p>Relecture critique et bienveillante de votre manuscrit.</p>
+        </a>
+        <a class="presta-card reveal" href="prestations/auto-edition.html" data-num="07" style="transition-delay:.3s">
           <h3>Auto-édition</h3>
-          <p>Accompagnement dans la mise en page et l'édition de votre biographie finalisée.</p>
-        </div>
-        <div class="presta-item" data-num="08">
-          <div class="presta-icon">✦</div>
+          <p>Accompagnement dans la mise en page et l'édition de votre biographie.</p>
+        </a>
+        <a class="presta-card reveal" href="prestations/ecrire-pour-surmonter.html" data-num="08" style="transition-delay:.35s">
           <h3>Écrire pour surmonter</h3>
-          <p>L'écriture comme outil de réparation face à l'injustice, au deuil, à l'épreuve.</p>
-        </div>
+          <p>L'écriture comme outil de réparation face à l'épreuve.</p>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- TÉMOIGNAGES -->
-  <section class="temoignages" id="temoignages">
+  <section class="temoignages">
     <div class="container">
-      <div class="section-label">Ce que disent les clients</div>
+      <div class="section-label">Témoignages</div>
       <h2>Des histoires qui ont trouvé leurs mots</h2>
       <div class="temoignages-grid">
-        <div class="temoignage">
+        <div class="temoignage reveal">
           <p>Il est agréable de discuter avec Éric, de partager son vécu. Il fait preuve de suffisamment d'empathie pour que la discussion ne prenne pas la tournure d'une réunion de travail. On parle, on se fait plaisir. Sauf qu'à l'issue, il y a un texte qui montre qu'il était bien là, à l'écoute.</p>
-          <div class="temoignage-author">
-            <strong>Nicolas Brun</strong>
-            <span>Réalisation d'une biographie</span>
-          </div>
+          <div class="temoignage-author"><strong>Nicolas Brun</strong><span>Réalisation d'une biographie</span></div>
         </div>
-        <div class="temoignage">
-          <p>Le moment était venu pour moi de raconter, de déposer mon histoire. Comme une thérapie. Il me fallait quelqu'un avec les qualités humaines nécessaires pour accueillir mon récit avec respect, humanité et empathie. Éric a été celui-là.</p>
-          <div class="temoignage-author">
-            <strong>Anonyme</strong>
-            <span>Biographie personnelle</span>
-          </div>
+        <div class="temoignage reveal" style="transition-delay:.1s">
+          <p>Le moment était venu pour moi de raconter, de déposer mon histoire. Il me fallait quelqu'un avec les qualités humaines nécessaires pour accueillir mon récit avec respect, humanité et empathie. Éric a été celui-là.</p>
+          <div class="temoignage-author"><strong>Anonyme</strong><span>Biographie personnelle</span></div>
         </div>
-        <div class="temoignage">
-          <p>Magnifique sur la forme — longtemps que je n'avais rencontré un texte qui me donne envie de le dévorer du début à la fin. Magnifique sur le fond : savoir dire, savoir écrire ce qui est juste, vrai, sans méchanceté, sans haine.</p>
-          <div class="temoignage-author">
-            <strong>Lectrice</strong>
-            <span>À propos du livre d'Éric</span>
-          </div>
+        <div class="temoignage reveal" style="transition-delay:.2s">
+          <p>Magnifique sur la forme — longtemps que je n'avais rencontré un texte qui me donne envie de le dévorer du début à la fin. Magnifique sur le fond : savoir dire, savoir écrire ce qui est juste, vrai.</p>
+          <div class="temoignage-author"><strong>Lectrice</strong><span>À propos du travail d'Éric</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- À PROPOS -->
-  <section class="about" id="apropos">
+  <!-- CTA -->
+  <div class="cta-band">
     <div class="container">
-      <div class="about-inner">
-        <div class="about-img">
-          <img src="https://images.unsplash.com/photo-1512314889357-e157c22f938d?w=700&q=75&auto=format" alt="Éric Collenne, biographe" loading="lazy" />
-        </div>
-        <div>
-          <div class="section-label">À propos</div>
-          <h2>Éric Collenne, biographe narrateur</h2>
-          <p>Basé à Épinal dans les Vosges, j'ai consacré ma vie à l'écoute et à l'écriture. Après un parcours professionnel riche — et une expérience personnelle de la souffrance au travail qui m'a conduit à écrire <em>La Méthode Michelin</em> — je mets aujourd'hui ces mots au service de votre histoire.</p>
-          <p>Je me déplace dans toute la France. Chaque projet est abordé avec la même exigence : l'écoute d'abord, la confiance ensuite, l'écriture enfin.</p>
-          <p>La biographie rédigée pourra être personnalisée avec des photos, des portraits et des documents d'archives. Un objet unique, à offrir ou à conserver.</p>
-          <a href="#contact" class="btn" style="margin-top:1rem;">Me contacter</a>
-        </div>
-      </div>
+      <h2>Prêt à raconter votre histoire ?</h2>
+      <p>Notre première rencontre, sans engagement, est une invitation à se connaître et à écouter les premiers mots de votre histoire.</p>
+      <a href="contact/index.html" class="btn btn-gold">Prendre contact</a>
+      <a href="prestations/tarifs.html" class="btn btn-outline" style="margin-left:1rem; border-color:rgba(253,250,245,.3); color:var(--white);">Voir les tarifs</a>
     </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <div class="contact-inner">
-        <div class="contact-info">
-          <div class="section-label">Contact</div>
-          <h2>Parlons de votre projet</h2>
-          <p>Chaque biographie commence par une conversation. N'hésitez pas à me contacter pour un premier échange sans engagement, pour que nous voyions ensemble si nous pouvons cheminer ensemble.</p>
-          <div class="contact-detail">
-            <div class="contact-detail-icon">📍</div>
-            <div class="contact-detail-text">
-              <strong>Adresse</strong>
-              <span>88000 Épinal, Vosges</span>
-            </div>
-          </div>
-          <div class="contact-detail">
-            <div class="contact-detail-icon">📞</div>
-            <div class="contact-detail-text">
-              <strong>Téléphone</strong>
-              <span><a href="tel:+33662618500" style="color:var(--muted); text-decoration:none;">+33 6 62 61 85 00</a></span>
-            </div>
-          </div>
-          <div class="contact-detail">
-            <div class="contact-detail-icon">⏰</div>
-            <div class="contact-detail-text">
-              <strong>Disponibilité</strong>
-              <span>Lundi — Vendredi, 9h–18h</span>
-            </div>
-          </div>
-        </div>
-
-        <form class="contact-form" onsubmit="handleSubmit(event)">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="prenom">Prénom</label>
-              <input type="text" id="prenom" placeholder="Votre prénom" />
-            </div>
-            <div class="form-group">
-              <label for="nom">Nom</label>
-              <input type="text" id="nom" placeholder="Votre nom" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" id="email" placeholder="votre@email.fr" required />
-          </div>
-          <div class="form-group">
-            <label for="tel">Téléphone</label>
-            <input type="tel" id="tel" placeholder="+33 6 00 00 00 00" />
-          </div>
-          <div class="form-group">
-            <label for="sujet">Votre projet</label>
-            <input type="text" id="sujet" placeholder="Biographie de vie, récit d'aventures…" />
-          </div>
-          <div class="form-group">
-            <label for="message">Message *</label>
-            <textarea id="message" rows="5" placeholder="Décrivez votre projet en quelques mots…" required></textarea>
-          </div>
-          <p class="form-note">* Ce formulaire envoie un email à Éric Collenne. Vos données ne seront pas partagées.</p>
-          <button type="submit" class="btn" style="border:none; cursor:pointer; width:100%; text-align:center;">Envoyer mon message</button>
-          <div id="form-success" style="display:none; padding:1rem; background:var(--parchment); border-left:3px solid var(--gold); font-size:.9rem; color:var(--muted);">
-            Merci ! Votre message a bien été envoyé. Éric vous répondra dans les plus brefs délais.
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <a class="footer-logo" href="#">Sillon de <span>Vie</span></a>
-    <p>© 2026 Éric Collenne · Biographe narrateur · Épinal, Vosges</p>
-    <nav>
-      <a href="https://www.sillondevie.fr" target="_blank">Site principal</a>
-      <a href="#prestations">Prestations</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </footer>
-
-  <script>
-    // Sticky header shadow
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 40);
-    });
-
-    // Intersection observer for why-cards
-    const cards = document.querySelectorAll('.why-card');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.2 });
-    cards.forEach(c => observer.observe(c));
-
-    // Form handler (opens mailto as fallback)
-    function handleSubmit(e) {
-      e.preventDefault();
-      const prenom  = document.getElementById('prenom').value;
-      const nom     = document.getElementById('nom').value;
-      const email   = document.getElementById('email').value;
-      const sujet   = document.getElementById('sujet').value;
-      const message = document.getElementById('message').value;
-
-      const body = `De : ${prenom} ${nom} (${email})\n\nProjet : ${sujet}\n\n${message}`;
-      const mailto = `mailto:contact@sillondevie.fr?subject=${encodeURIComponent('Demande de biographie - ' + sujet)}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailto;
-
-      document.getElementById('form-success').style.display = 'block';
-    }
-  </script>
+  </div>
 </body>
 </html>
