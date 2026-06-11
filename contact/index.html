@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Sillon de Vie · Éric Collenne</title>
+  <meta name="description" content="Contactez Éric Collenne, biographe narrateur à Épinal. Première rencontre gratuite et sans engagement." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .contact-detail {
+      display: flex; align-items: flex-start; gap: 1.2rem;
+      margin-bottom: 1.8rem;
+    }
+    .contact-detail-icon {
+      width: 3rem; height: 3rem;
+      border: 1px solid var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; color: var(--gold); font-size: 1.1rem;
+    }
+    .contact-detail-text strong {
+      display: block; font-size: .72rem; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--ink); margin-bottom: .2rem;
+    }
+    .contact-detail-text span { font-size: .92rem; color: var(--muted); }
+    .contact-detail-text a { color: var(--muted); text-decoration: none; }
+    .contact-detail-text a:hover { color: var(--gold); }
+
+    .contact-form { display: flex; flex-direction: column; gap: 1.1rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { display: flex; flex-direction: column; gap: .4rem; }
+    .form-group label { font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+    .form-group input, .form-group textarea, .form-group select {
+      padding: .9rem 1rem;
+      background: var(--parchment);
+      border: 1px solid var(--warm);
+      font-family: 'Jost', sans-serif;
+      font-size: .9rem; color: var(--ink);
+      outline: none; resize: none; transition: border-color .25s;
+      appearance: none;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--gold); }
+    .form-note { font-size: .78rem; color: var(--muted); font-style: italic; }
+    #form-success {
+      display: none; padding: 1.2rem 1.5rem;
+      background: var(--parchment); border-left: 3px solid var(--gold);
+      font-size: .9rem; color: var(--muted);
+    }
+
+    .promise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .promise-item { text-align: center; padding: 2rem 1.5rem; background: var(--parchment); }
+    .promise-icon { font-size: 1.8rem; margin-bottom: .8rem; }
+    .promise-item h3 { font-size: 1rem; margin-bottom: .4rem; }
+    .promise-item p { font-size: .83rem; margin-bottom: 0; }
+
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <script src="../js/components.js" data-depth="1"></script>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="../index.html">Accueil</a><span>/</span><span>Contact</span></div>
+      <div class="page-hero-label">Première rencontre gratuite</div>
+      <h1>Parlons de votre projet</h1>
+      <p class="page-hero-sub">Chaque biographie commence par une conversation. Contactez-moi pour un premier échange sans engagement.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Infos -->
+        <div class="reveal">
+          <h2>Me contacter</h2>
+          <p>N'hésitez pas à me contacter pour un premier échange. Nous verrons ensemble si nous pouvons cheminer ensemble autour de votre projet biographique.</p>
+
+          <div style="margin-top:2.5rem;">
+            <div class="contact-detail">
+              <div class="contact-detail-icon">📞</div>
+              <div class="contact-detail-text">
+                <strong>Téléphone</strong>
+                <span><a href="tel:+33662618500">+33 6 62 61 85 00</a></span>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">📍</div>
+              <div class="contact-detail-text">
+                <strong>Localisation</strong>
+                <span>Épinal, Vosges (88) — France</span>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">🌐</div>
+              <div class="contact-detail-text">
+                <strong>Site principal</strong>
+                <span><a href="https://www.sillondevie.fr" target="_blank">www.sillondevie.fr</a></span>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">⏰</div>
+              <div class="contact-detail-text">
+                <strong>Disponibilité</strong>
+                <span>Lundi – Vendredi, 9h – 18h</span>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">✈️</div>
+              <div class="contact-detail-text">
+                <strong>Déplacements</strong>
+                <span>Dans toute la France. Visio (Zoom, Skype, WhatsApp) également possible.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="promise-grid" style="margin-top:3rem;">
+            <div class="promise-item">
+              <div class="promise-icon">🤝</div>
+              <h3>Sans engagement</h3>
+              <p>La première rencontre est gratuite et sans engagement de votre part.</p>
+            </div>
+            <div class="promise-item">
+              <div class="promise-icon">🔒</div>
+              <h3>Confidentialité</h3>
+              <p>Tout ce qui est partagé reste strictement confidentiel.</p>
+            </div>
+            <div class="promise-item">
+              <div class="promise-icon">📖</div>
+              <h3>Sur mesure</h3>
+              <p>Chaque projet est unique et traité comme tel.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulaire -->
+        <div class="reveal" style="transition-delay:.15s;">
+          <h2>Envoyer un message</h2>
+          <form class="contact-form" onsubmit="handleSubmit(event)" style="margin-top:1.5rem;">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" placeholder="Votre prénom" />
+              </div>
+              <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" placeholder="Votre nom" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" placeholder="votre@email.fr" required />
+            </div>
+            <div class="form-group">
+              <label for="tel">Téléphone</label>
+              <input type="tel" id="tel" placeholder="+33 6 00 00 00 00" />
+            </div>
+            <div class="form-group">
+              <label for="prestation">Prestation souhaitée</label>
+              <select id="prestation">
+                <option value="">Choisissez une prestation…</option>
+                <option>Biographie de vie</option>
+                <option>Biographie à deux</option>
+                <option>Biographie de naissance</option>
+                <option>Biographie de sportif</option>
+                <option>Récit d'aventures</option>
+                <option>Bétalecture professionnelle</option>
+                <option>Auto-édition</option>
+                <option>Écrire pour surmonter</option>
+                <option>Autre / Je ne sais pas encore</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Votre message *</label>
+              <textarea id="message" rows="5" placeholder="Décrivez votre projet en quelques mots…" required></textarea>
+            </div>
+            <p class="form-note">* Ce formulaire envoie un email directement à Éric Collenne. Vos données ne seront pas partagées.</p>
+            <button type="submit" class="btn btn-dark" style="width:100%; text-align:center; font-size:.75rem;">Envoyer mon message</button>
+            <div id="form-success">
+              ✦ Merci ! Votre message a bien été envoyé. Éric vous répondra dans les plus brefs délais.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      const prenom = document.getElementById('prenom').value;
+      const nom = document.getElementById('nom').value;
+      const email = document.getElementById('email').value;
+      const tel = document.getElementById('tel').value;
+      const prestation = document.getElementById('prestation').value;
+      const message = document.getElementById('message').value;
+      const body = `De : ${prenom} ${nom}\nEmail : ${email}\nTél : ${tel}\nPrestation : ${prestation}\n\n${message}`;
+      window.location.href = `mailto:contact@sillondevie.fr?subject=${encodeURIComponent('Demande biographie – ' + (prestation || 'Contact'))}&body=${encodeURIComponent(body)}`;
+      document.getElementById('form-success').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

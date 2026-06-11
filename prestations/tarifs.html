@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarifs — Sillon de Vie · Éric Collenne</title>
+  <meta name="description" content="Tarifs des biographies. Formule à l'heure, coffrets au choix, options photo et portrait. Éric Collenne, biographe narrateur à Épinal." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .tarif-intro {
+      background: var(--parchment);
+      border-left: 4px solid var(--gold);
+      padding: 2.5rem 3rem;
+      margin-bottom: 4rem;
+    }
+    .tarif-intro p {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.2rem;
+      line-height: 1.75;
+      color: var(--ink);
+      margin-bottom: .8rem;
+    }
+    .tarif-intro p:last-child { margin-bottom: 0; }
+    .tarif-intro strong { color: var(--gold); font-style: normal; }
+
+    .packs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2px;
+      margin: 2rem 0 3rem;
+    }
+    .pack {
+      padding: 2.5rem 2rem;
+      background: var(--warm);
+      position: relative;
+      text-align: center;
+      transition: background .3s;
+    }
+    .pack:hover { background: var(--ink); }
+    .pack:hover h3, .pack:hover .pack-hours, .pack:hover p { color: var(--white); }
+    .pack:hover .pack-icon { color: var(--gold-lt); }
+    .pack-featured {
+      background: var(--ink);
+    }
+    .pack-featured h3, .pack-featured .pack-hours, .pack-featured p { color: var(--white); }
+    .pack-featured .pack-icon { color: var(--gold-lt); }
+    .pack-badge {
+      position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
+      background: var(--gold); color: var(--white);
+      font-size: .65rem; letter-spacing: .14em; text-transform: uppercase;
+      padding: .25rem .8rem;
+    }
+    .pack-icon { font-size: 2rem; margin-bottom: 1rem; color: var(--gold); transition: color .3s; }
+    .pack h3 { font-size: 1.4rem; margin-bottom: .5rem; transition: color .3s; }
+    .pack-hours {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem; font-weight: 300; color: var(--gold);
+      line-height: 1; margin-bottom: .5rem; transition: color .3s;
+    }
+    .pack p { font-size: .85rem; transition: color .3s; margin-bottom: 0; }
+
+    .tarif-section { margin-bottom: 3.5rem; }
+    .tarif-section h2 { margin-bottom: 1rem; }
+
+    .tarif-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+    .tarif-table th, .tarif-table td {
+      padding: 1rem 1.2rem; text-align: left;
+      border-bottom: 1px solid var(--warm);
+      font-size: .9rem;
+    }
+    .tarif-table th {
+      font-size: .7rem; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--gold); font-weight: 400; background: var(--parchment);
+    }
+    .tarif-table tr:last-child td { border-bottom: none; }
+    .tarif-table tr:hover td { background: var(--parchment); }
+
+    .note-box {
+      padding: 1.5rem 2rem;
+      background: var(--parchment);
+      border-top: 2px solid var(--gold);
+      margin: 1.5rem 0;
+    }
+    .note-box p { font-size: .88rem; margin-bottom: .5rem; }
+    .note-box p:last-child { margin-bottom: 0; }
+
+    .fourchette {
+      display: inline-block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem; font-weight: 300; color: var(--gold);
+    }
+  </style>
+</head>
+<body>
+  <script src="../js/components.js" data-depth="1"></script>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="../index.html">Accueil</a><span>/</span><a href="index.html">Prestations</a><span>/</span><span>Tarifs</span></div>
+      <div class="page-hero-label">Transparence</div>
+      <h1>Tarifs des biographies</h1>
+      <p class="page-hero-sub">Chaque histoire est unique — et son prix aussi. Voici comment je travaille et ce que vous pouvez attendre.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+
+      <!-- INTRO -->
+      <div class="tarif-intro reveal">
+        <p>Quels tarifs pour les biographies ? C'est une belle question… à laquelle il m'est difficile de répondre précisément.</p>
+        <p>Parce que chaque projet, chaque histoire, chaque vie est unique. Et surtout, parce que l'écriture de votre histoire relève de l'artisanat — votre livre sera réalisé sur mesure, selon vos souhaits.</p>
+        <p><strong>À combien estimez-vous votre histoire ? Votre vie ?</strong></p>
+        <p>Notre première rencontre, sans engagement, est une invitation à se connaître, à écouter les premiers mots de votre histoire. Mon devis viendra par la suite.</p>
+      </div>
+
+      <!-- FONCTIONNEMENT -->
+      <div class="tarif-section reveal">
+        <div class="section-label">Comment ça fonctionne</div>
+        <h2>Une séance minimum de 6 heures</h2>
+        <p>Nous travaillons pour des séances d'<strong>au minimum 6 heures</strong> : une heure de discussion suivie de 5 heures de travail de ma part. Ce temps est mis à profit pour :</p>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:1.5rem;">
+          <div class="card"><h3>Écriture & transcription</h3><p>Reprendre nos échanges sous forme d'écrits, transcrire le langage oral à l'écrit, fluidifier les phrases.</p></div>
+          <div class="card"><h3>Mise en forme</h3><p>Mettre de l'ordre dans les idées, chapitrer, maquetter l'ouvrage, proposer la couverture.</p></div>
+          <div class="card"><h3>Corrections</h3><p>Intégrer vos retours, supprimer ou enrichir des passages, éliminer les redondances.</p></div>
+          <div class="card"><h3>Relecture</h3><p>Corriger, relire et encore corriger. Jusqu'à ce que le texte sonne juste.</p></div>
+        </div>
+        <div class="note-box" style="margin-top:2rem;">
+          <p>Il faut un <strong>minimum de 15 entretiens</strong> pour réaliser une biographie complète. Ce temps peut varier énormément d'une personne à une autre.</p>
+          <p>L'écriture d'une biographie peut varier de <span class="fourchette">3 000 €</span> à <span class="fourchette">30 000 €</span> voire plus, selon la longueur et la complexité du récit.</p>
+        </div>
+      </div>
+
+      <!-- PACKS -->
+      <div class="tarif-section reveal">
+        <div class="section-label">Forfaits</div>
+        <h2>Packs biographies — idéaux pour un cadeau</h2>
+        <p>Pour ceux qui se sentent plus à l'aise avec un budget défini, ou pour l'achat d'un cadeau, je propose trois forfaits selon la durée des échanges.</p>
+        <div class="packs-grid">
+          <div class="pack">
+            <div class="pack-icon">🚶</div>
+            <h3>La Promenade</h3>
+            <div class="pack-hours">4h</div>
+            <p>Un premier récit, un fragment de vie. Idéal pour une histoire courte ou un cadeau.</p>
+          </div>
+          <div class="pack pack-featured">
+            <div class="pack-badge">Le plus choisi</div>
+            <div class="pack-icon">🥾</div>
+            <h3>La Randonnée</h3>
+            <div class="pack-hours">9h</div>
+            <p>Un récit plus étoffé, avec le temps de creuser les souvenirs et les émotions.</p>
+          </div>
+          <div class="pack">
+            <div class="pack-icon">🏔️</div>
+            <h3>Le GR</h3>
+            <div class="pack-hours">15h</div>
+            <p>Un parcours complet pour ceux qui souhaitent aller au bout de leur histoire.</p>
+          </div>
+        </div>
+        <div class="note-box">
+          <p>Les frais d'impression sont à ajouter selon le nombre d'exemplaires. Le tarif exact de chaque pack est défini lors de notre premier échange.</p>
+        </div>
+      </div>
+
+      <!-- OPTIONS -->
+      <div class="tarif-section reveal">
+        <div class="section-label">Options</div>
+        <h2>Enrichir votre biographie</h2>
+        <table class="tarif-table">
+          <thead>
+            <tr><th>Option</th><th>Description</th><th>Tarif</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Option photo</strong></td>
+              <td>Intégration de vos photos ou séances photos pour illustrer le livre</td>
+              <td>Sur devis (selon temps de travail)</td>
+            </tr>
+            <tr>
+              <td><strong>Portrait au crayon</strong></td>
+              <td>Portraits en noir et blanc format A4 maxi (délai ~15 jours)</td>
+              <td>50 € / portrait</td>
+            </tr>
+            <tr>
+              <td><strong>Impression simple</strong></td>
+              <td>Texte imprimé en A4, relié (baguette ou rouleau) ou fichier numérique</td>
+              <td>Inclus dans la prestation</td>
+            </tr>
+            <tr>
+              <td><strong>Accompagnement impression</strong></td>
+              <td>Contact imprimeur, devis, suivi. Entre 7 et 35 € l'exemplaire (hors frais d'impression)</td>
+              <td>200 €</td>
+            </tr>
+            <tr>
+              <td><strong>Auto-édition</strong></td>
+              <td>Mise en ligne sur BoD, KDP, Edilivre, Librinova, etc.</td>
+              <td>Sur devis</td>
+            </tr>
+            <tr>
+              <td><strong>Accompagnement éditeur</strong></td>
+              <td>Prise de contact avec des éditions alternatives et suivi du dossier</td>
+              <td>200 €</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- DÉPLACEMENTS -->
+      <div class="tarif-section reveal">
+        <div class="section-label">Déplacements</div>
+        <h2>Frais de déplacement</h2>
+        <table class="tarif-table">
+          <thead>
+            <tr><th>Distance</th><th>Conditions</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Moins de 20 km</strong></td>
+              <td>Inclus, aucun frais supplémentaire</td>
+            </tr>
+            <tr>
+              <td><strong>À partir de 20 km</strong></td>
+              <td>0,60 € TTC / km + forfait déplacement 5 € par séance</td>
+            </tr>
+            <tr>
+              <td><strong>Entre 80 et 120 km</strong></td>
+              <td>Forfait restauration et déplacement : 20 € par déplacement</td>
+            </tr>
+            <tr>
+              <td><strong>Nuit hors domicile</strong></td>
+              <td>Forfait restauration + hébergement 110 € / jour + frais réels de transport</td>
+            </tr>
+            <tr>
+              <td><strong>Secteur touristique</strong> (Paris, Bordeaux…)</td>
+              <td>Forfait hébergement majoré — précisé dans le devis initial</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="note-box">
+          <p>💡 <strong>Pour éviter ces frais</strong>, je recommande vivement l'utilisation du téléphone, de Skype, Zoom ou WhatsApp. Beaucoup d'options sont compatibles avec la rédaction d'une biographie et permettent de briser les kilomètres.</p>
+        </div>
+      </div>
+
+      <div class="reveal" style="text-align:center; margin-top:2rem;">
+        <a href="../contact/index.html" class="btn btn-dark">Demander un devis</a>
+        <a href="index.html" class="btn btn-outline" style="margin-left:1rem;">Voir les prestations</a>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="container">
+      <h2>Un devis adapté à votre projet</h2>
+      <p>Notre première rencontre est gratuite et sans engagement. C'est l'occasion de parler de votre projet et d'établir ensemble un devis sur mesure.</p>
+      <a href="../contact/index.html" class="btn btn-gold">Prendre contact</a>
+    </div>
+  </div>
+</body>
+</html>
