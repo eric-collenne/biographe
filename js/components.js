@@ -39,45 +39,13 @@
   // ── FOOTER ──
   const footerHTML = `
   <footer>
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <a class="logo" href="${base}index.html">Sillon de <span>Vie</span></a>
-        <p>Biographe narrateur basé à Épinal (Vosges). J'accompagne les personnes dans l'écriture de leur histoire, avec écoute, respect et confidentialité.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Prestations</h4>
-        <ul>
-          <li><a href="${base}prestations/biographie-de-vie.html">Biographie de vie</a></li>
-          <li><a href="${base}prestations/biographie-a-deux.html">Biographie à deux</a></li>
-          <li><a href="${base}prestations/biographie-de-naissance.html">Biographie de naissance</a></li>
-          <li><a href="${base}prestations/biographie-de-sportif.html">Biographie de sportif</a></li>
-          <li><a href="${base}prestations/recit-aventures.html">Récit d'aventures</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="${base}prestations/betalecture.html">Bétalecture</a></li>
-          <li><a href="${base}prestations/auto-edition.html">Auto-édition</a></li>
-          <li><a href="${base}prestations/ecrire-pour-surmonter.html">Écrire pour surmonter</a></li>
-          <li><a href="${base}prestations/tarifs.html">Tarifs</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="tel:+33662618500">+33 6 62 61 85 00</a></li>
-          <li><a href="${base}contact/index.html">Formulaire de contact</a></li>
-          <li><a href="https://www.sillondevie.fr" target="_blank">sillondevie.fr</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 Éric Collenne · Biographe narrateur · Épinal, Vosges</p>
-      <nav>
-        <a href="${base}index.html">Accueil</a>
-        <a href="${base}prestations/tarifs.html">Tarifs</a>
-        <a href="${base}contact/index.html">Contact</a>
+    <div class="footer-bottom" style="max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+      <a class="logo" href="${base}index.html">Sillon de <span>Vie</span></a>
+      <p style="font-size:.78rem; color:rgba(253,250,245,0.45);">© 2026 Éric Collenne · Biographe narrateur · Épinal, Vosges</p>
+      <nav style="display:flex; gap:1.5rem;">
+        <a href="${base}a-propos.html" style="font-size:.75rem; color:rgba(253,250,245,0.45); text-decoration:none;">À propos</a>
+        <a href="${base}prestations/tarifs.html" style="font-size:.75rem; color:rgba(253,250,245,0.45); text-decoration:none;">Tarifs</a>
+        <a href="${base}contact/index.html" style="font-size:.75rem; color:rgba(253,250,245,0.45); text-decoration:none;">Contact</a>
       </nav>
     </div>
   </footer>`;
