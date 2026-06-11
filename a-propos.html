@@ -16,25 +16,20 @@
     }
 
     .apropos-photo {
-      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
     }
     .apropos-photo img {
-      width: 100%;
-      aspect-ratio: 3/4;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
       object-fit: cover;
       object-position: top;
       filter: sepia(10%) brightness(.95);
+      border: 4px solid var(--gold);
       display: block;
-    }
-    .apropos-photo::after {
-      content: '';
-      position: absolute;
-      bottom: -1.5rem;
-      right: -1.5rem;
-      width: 60%;
-      height: 60%;
-      border: 2px solid var(--gold);
-      z-index: -1;
     }
     .apropos-photo-caption {
       font-size: .75rem;
@@ -42,7 +37,6 @@
       text-transform: uppercase;
       color: var(--muted);
       text-align: center;
-      margin-top: 1.2rem;
     }
 
     .apropos-text h2 {

@@ -12,19 +12,7 @@
     <ul class="nav-links">
       <li><a href="${base}index.html">Accueil</a></li>
       <li><a href="${base}a-propos.html">À propos</a></li>
-      <li class="dropdown">
-        <a href="${base}prestations/index.html">Prestations ▾</a>
-        <div class="dropdown-menu">
-          <a href="${base}prestations/biographie-de-vie.html">Biographie de vie</a>
-          <a href="${base}prestations/biographie-a-deux.html">Biographie à deux</a>
-          <a href="${base}prestations/biographie-de-naissance.html">Biographie de naissance</a>
-          <a href="${base}prestations/biographie-de-sportif.html">Biographie de sportif</a>
-          <a href="${base}prestations/recit-aventures.html">Récit d'aventures</a>
-          <a href="${base}prestations/betalecture.html">Bétalecture</a>
-          <a href="${base}prestations/auto-edition.html">Auto-édition</a>
-          <a href="${base}prestations/ecrire-pour-surmonter.html">Écrire pour surmonter</a>
-        </div>
-      </li>
+      <li><a href="${base}prestations/index.html">Prestations</a></li>
       <li><a href="${base}prestations/tarifs.html">Tarifs</a></li>
       <li><a href="${base}contact/index.html" class="nav-cta">Contact</a></li>
     </ul>
