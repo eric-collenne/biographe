@@ -3,7 +3,11 @@
 
 (function () {
   const depth = document.currentScript.getAttribute('data-depth') || '0';
-  const base = depth === '1' ? '../' : '';
+  // Detect if served from a repository subdirectory (e.g. /biographe/)
+  const pathParts = location.pathname.split('/').filter(Boolean);
+  const inRepo = pathParts.length > 0 && !pathParts[0].includes('.html');
+  const repoPrefix = (inRepo && location.hostname.includes('github.io')) ? '/' + pathParts[0] + '/' : '/';
+  const base = depth === '1' ? '../' : (repoPrefix === '/' ? '' : repoPrefix);
 
   // ── HEADER ──
   const headerHTML = `
