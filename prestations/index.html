@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mes prestations — Sillon de Vie · Éric Collenne</title>
-  <meta name="description" content="Découvrez toutes les prestations biographiques d'Éric Collenne : biographies de vie, sportif, naissance, récits d'aventures, bétalecture, auto-édition." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <meta name="description" content="Découvrez toutes les prestations biographiques d'Éric Collenne : biographies, écrire pour surmonter, bétalecture, auto-édition." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
   <style>
-    .presta-list { display: grid; gap: 2px; margin-top: 3rem; }
+    .presta-group { margin-bottom: 4rem; }
+    .presta-group-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem; font-weight: 300;
+      color: var(--ink); margin-bottom: .3rem;
+      padding-bottom: .8rem;
+      border-bottom: 2px solid var(--gold);
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .presta-group-title span {
+      font-size: .65rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--gold); font-family: 'Jost', sans-serif; font-weight: 400;
+    }
+    .presta-list { display: grid; gap: 2px; margin-top: 1.5rem; }
     .presta-row {
-      display: grid; grid-template-columns: 80px 1fr auto;
+      display: grid; grid-template-columns: 60px 1fr auto;
       align-items: center; gap: 2rem;
-      padding: 2rem 2.5rem; background: var(--warm);
+      padding: 1.6rem 2rem; background: var(--warm);
       text-decoration: none; color: inherit;
       transition: background .3s;
     }
@@ -25,15 +36,15 @@
     .presta-row:hover .presta-row-arrow { color: var(--white); }
     .presta-row-num {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2.5rem; font-weight: 300; color: var(--gold); line-height: 1;
+      font-size: 2rem; font-weight: 300; color: var(--gold); line-height: 1;
       transition: color .3s;
     }
-    .presta-row-title { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; margin-bottom: .3rem; transition: color .3s; }
-    .presta-row-desc { font-size: .85rem; color: var(--muted); transition: color .3s; margin-bottom: 0; }
-    .presta-row-arrow { font-size: 1.2rem; color: var(--gold); transition: color .3s; }
+    .presta-row-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; margin-bottom: .2rem; transition: color .3s; }
+    .presta-row-desc { font-size: .83rem; color: var(--muted); transition: color .3s; margin-bottom: 0; }
+    .presta-row-arrow { font-size: 1.1rem; color: var(--gold); transition: color .3s; }
 
     @media (max-width: 600px) {
-      .presta-row { grid-template-columns: 50px 1fr; padding: 1.5rem; }
+      .presta-row { grid-template-columns: 40px 1fr; padding: 1.2rem; }
       .presta-row-arrow { display: none; }
     }
   </style>
@@ -43,9 +54,7 @@
 
   <div class="page-hero">
     <div class="page-hero-inner">
-      <div class="breadcrumb">
-        <a href="../index.html">Accueil</a><span>/</span><span>Prestations</span>
-      </div>
+      <div class="breadcrumb"><a href="../index.html">Accueil</a><span>/</span><span>Prestations</span></div>
       <div class="page-hero-label">Ce que je propose</div>
       <h1>Mes prestations</h1>
       <p class="page-hero-sub">De la biographie de vie au récit d'aventures, chaque prestation est pensée pour accueillir votre histoire avec le soin qu'elle mérite.</p>
@@ -54,76 +63,112 @@
 
   <section>
     <div class="container">
-      <div class="presta-list">
-        <a class="presta-row reveal" href="biographie-de-vie.html">
-          <div class="presta-row-num">01</div>
-          <div>
-            <div class="presta-row-title">Biographie de vie</div>
-            <p class="presta-row-desc">Le récit complet de votre parcours, de vos origines à aujourd'hui. Un patrimoine familial unique à transmettre.</p>
-          </div>
-          <div class="presta-row-arrow">→</div>
-        </a>
-        <a class="presta-row reveal" href="biographie-a-deux.html">
-          <div class="presta-row-num">02</div>
-          <div>
-            <div class="presta-row-title">Biographie à deux</div>
-            <p class="presta-row-desc">L'histoire d'une relation, d'un duo. Couple, amitié, collaboration créatrice ou fraternité.</p>
-          </div>
-          <div class="presta-row-arrow">→</div>
-        </a>
-        <a class="presta-row reveal" href="biographie-de-naissance.html">
-          <div class="presta-row-num">03</div>
-          <div>
-            <div class="presta-row-title">Biographie de naissance</div>
-            <p class="presta-row-desc">Racontez les premiers jours, les premières émotions, le récit d'une arrivée au monde.</p>
-          </div>
-          <div class="presta-row-arrow">→</div>
-        </a>
-        <a class="presta-row reveal" href="biographie-de-sportif.html">
-          <div class="presta-row-num">04</div>
-          <div>
-            <div class="presta-row-title">Biographie de sportif</div>
-            <p class="presta-row-desc">Votre parcours sportif, vos exploits, vos sacrifices et votre mental de champion mis en mots.</p>
-          </div>
-          <div class="presta-row-arrow">→</div>
-        </a>
-        <a class="presta-row reveal" href="recit-aventures.html">
-          <div class="presta-row-num">05</div>
-          <div>
-            <div class="presta-row-title">Récit d'aventures</div>
-            <p class="presta-row-desc">Voyages, explorations, expéditions. Mettre en mots l'extraordinaire de votre aventure.</p>
-          </div>
-          <div class="presta-row-arrow">→</div>
-        </a>
-        <a class="presta-row reveal" href="betalecture.html">
-          <div class="presta-row-num">06</div>
-          <div>
-            <div class="presta-row-title">Bétalecture professionnelle</div>
-            <p class="presta-row-desc">Relecture critique et bienveillante de votre manuscrit avant publication ou partage.</p>
-          </div>
-          <div class="presta-row-arrow">→</div>
-        </a>
-        <a class="presta-row reveal" href="auto-edition.html">
-          <div class="presta-row-num">07</div>
-          <div>
-            <div class="presta-row-title">Auto-édition</div>
-            <p class="presta-row-desc">Accompagnement dans la mise en page et l'édition de votre biographie finalisée.</p>
-          </div>
-          <div class="presta-row-arrow">→</div>
-        </a>
-        <a class="presta-row reveal" href="ecrire-pour-surmonter.html">
-          <div class="presta-row-num">08</div>
-          <div>
-            <div class="presta-row-title">Écrire pour surmonter</div>
-            <p class="presta-row-desc">L'écriture comme outil de réparation face à l'injustice, au deuil, à l'épreuve.</p>
-          </div>
-          <div class="presta-row-arrow">→</div>
-        </a>
+
+      <!-- BIOGRAPHIES -->
+      <div class="presta-group">
+        <div class="presta-group-title">Les biographies <span>Récits de vie</span></div>
+        <div class="presta-list">
+          <a class="presta-row" href="biographie-de-vie.html">
+            <div class="presta-row-num">01</div>
+            <div>
+              <div class="presta-row-title">Biographie de vie</div>
+              <p class="presta-row-desc">Le récit complet de votre parcours, de vos origines à aujourd'hui. Un patrimoine familial unique à transmettre.</p>
+            </div>
+            <div class="presta-row-arrow">→</div>
+          </a>
+          <a class="presta-row" href="biographie-a-deux.html">
+            <div class="presta-row-num">02</div>
+            <div>
+              <div class="presta-row-title">Biographie à deux</div>
+              <p class="presta-row-desc">L'histoire d'une relation, d'un duo. Couple, amitié, collaboration créatrice ou fraternité.</p>
+            </div>
+            <div class="presta-row-arrow">→</div>
+          </a>
+          <a class="presta-row" href="biographie-de-naissance.html">
+            <div class="presta-row-num">03</div>
+            <div>
+              <div class="presta-row-title">Biographie de naissance</div>
+              <p class="presta-row-desc">Saisir les émotions de la grossesse et de la naissance dans un livre, une trace pour votre enfant.</p>
+            </div>
+            <div class="presta-row-arrow">→</div>
+          </a>
+          <a class="presta-row" href="biographie-de-sportif.html">
+            <div class="presta-row-num">04</div>
+            <div>
+              <div class="presta-row-title">Biographie de sportif</div>
+              <p class="presta-row-desc">Votre parcours sportif, vos exploits, vos sacrifices et votre mental de champion mis en mots.</p>
+            </div>
+            <div class="presta-row-arrow">→</div>
+          </a>
+          <a class="presta-row" href="biographie-de-zebre.html">
+            <div class="presta-row-num">05</div>
+            <div>
+              <div class="presta-row-title">Biographie de zèbre</div>
+              <p class="presta-row-desc">Le récit d'un être à part. Pour les HPE, surdoués, hypersensibles qui souhaitent mettre des mots sur leur singularité.</p>
+            </div>
+            <div class="presta-row-arrow">→</div>
+          </a>
+          <a class="presta-row" href="recit-aventures.html">
+            <div class="presta-row-num">06</div>
+            <div>
+              <div class="presta-row-title">Récit d'aventures</div>
+              <p class="presta-row-desc">Voyages, explorations, expéditions. Mettre en mots l'extraordinaire de votre aventure.</p>
+            </div>
+            <div class="presta-row-arrow">→</div>
+          </a>
+        </div>
       </div>
-      <div style="text-align:center; margin-top:4rem;">
+
+      <!-- ÉCRIRE POUR SURMONTER -->
+      <div class="presta-group">
+        <div class="presta-group-title">Écrire pour surmonter <span>Résilience</span></div>
+        <div class="presta-list">
+          <a class="presta-row" href="ecrire-pour-surmonter.html">
+            <div class="presta-row-num">07</div>
+            <div>
+              <div class="presta-row-title">Écrire pour surmonter l'injustice</div>
+              <p class="presta-row-desc">L'écriture comme outil de réparation face à l'injustice, au deuil, à l'épreuve traversée.</p>
+            </div>
+            <div class="presta-row-arrow">→</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- ACCOMPAGNEMENTS LITTÉRAIRES -->
+      <div class="presta-group">
+        <div class="presta-group-title">Accompagnements littéraires <span>Manuscrits</span></div>
+        <div class="presta-list">
+          <a class="presta-row" href="betalecture.html">
+            <div class="presta-row-num">08</div>
+            <div>
+              <div class="presta-row-title">Bétalecture professionnelle</div>
+              <p class="presta-row-desc">Relecture critique et bienveillante de votre manuscrit avant publication ou partage.</p>
+            </div>
+            <div class="presta-row-arrow">→</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- AUTO-ÉDITION -->
+      <div class="presta-group">
+        <div class="presta-group-title">Auto-édition <span>Publication</span></div>
+        <div class="presta-list">
+          <a class="presta-row" href="auto-edition.html">
+            <div class="presta-row-num">09</div>
+            <div>
+              <div class="presta-row-title">Auto-édition de votre biographie</div>
+              <p class="presta-row-desc">Accompagnement complet dans la mise en page et la publication de votre biographie finalisée.</p>
+            </div>
+            <div class="presta-row-arrow">→</div>
+          </a>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:2rem;">
         <a href="tarifs.html" class="btn btn-dark">Consulter les tarifs</a>
         <a href="../contact/index.html" class="btn btn-outline" style="margin-left:1rem;">Me contacter</a>
       </div>
+
     </div>
   </section>
 </body>

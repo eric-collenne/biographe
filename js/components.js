@@ -28,10 +28,11 @@
     <a href="${base}prestations/biographie-a-deux.html" class="mobile-sub">Biographie à deux</a>
     <a href="${base}prestations/biographie-de-naissance.html" class="mobile-sub">Biographie de naissance</a>
     <a href="${base}prestations/biographie-de-sportif.html" class="mobile-sub">Biographie de sportif</a>
+    <a href="${base}prestations/biographie-de-zebre.html" class="mobile-sub">Biographie de zèbre</a>
     <a href="${base}prestations/recit-aventures.html" class="mobile-sub">Récit d'aventures</a>
+    <a href="${base}prestations/ecrire-pour-surmonter.html" class="mobile-sub">Écrire pour surmonter</a>
     <a href="${base}prestations/betalecture.html" class="mobile-sub">Bétalecture</a>
     <a href="${base}prestations/auto-edition.html" class="mobile-sub">Auto-édition</a>
-    <a href="${base}prestations/ecrire-pour-surmonter.html" class="mobile-sub">Écrire pour surmonter</a>
     <a href="${base}prestations/tarifs.html">Tarifs</a>
     <a href="${base}contact/index.html">Contact</a>
   </nav>`;
@@ -46,6 +47,7 @@
         <a href="${base}a-propos.html" style="font-size:.75rem; color:rgba(253,250,245,0.45); text-decoration:none;">À propos</a>
         <a href="${base}prestations/tarifs.html" style="font-size:.75rem; color:rgba(253,250,245,0.45); text-decoration:none;">Tarifs</a>
         <a href="${base}contact/index.html" style="font-size:.75rem; color:rgba(253,250,245,0.45); text-decoration:none;">Contact</a>
+        <a href="${base}mentions-legales.html" style="font-size:.75rem; color:rgba(253,250,245,0.45); text-decoration:none;">Mentions légales</a>
       </nav>
     </div>
   </footer>`;
