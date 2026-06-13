@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comment ça se passe — Sillon de Vie · Éric Collenne</title>
+  <meta name="description" content="Comment se déroule une biographie avec Éric Collenne ? De la première rencontre à la remise du texte, découvrez le processus de collaboration." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .collab-step {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 2rem;
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--warm);
+    }
+    .collab-step:last-child { border-bottom: none; }
+    .collab-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem; font-weight: 300;
+      color: var(--gold); line-height: 1;
+      padding-top: .3rem;
+    }
+    .collab-step h2 { font-size: 1.6rem; margin-bottom: 1rem; }
+    .collab-step p { font-size: .97rem; line-height: 1.9; color: var(--muted); margin-bottom: 1rem; }
+    .collab-step p:last-child { margin-bottom: 0; }
+    .collab-step ul {
+      list-style: none; display: flex; flex-direction: column; gap: .5rem; margin-bottom: 1rem;
+    }
+    .collab-step ul li {
+      font-size: .92rem; color: var(--muted); line-height: 1.7;
+      padding-left: 1.2rem; position: relative;
+    }
+    .collab-step ul li::before {
+      content: '✦'; position: absolute; left: 0;
+      font-size: .5rem; color: var(--gold); top: .45rem;
+    }
+    .collab-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-size: 1.15rem; line-height: 1.75;
+      color: var(--ink); border-left: 3px solid var(--gold);
+      padding: 1.2rem 1.8rem; background: var(--parchment); margin: 1.5rem 0;
+    }
+    @media (max-width: 600px) {
+      .collab-step { grid-template-columns: 50px 1fr; gap: 1rem; }
+      .collab-num { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="site-header">
+    <a class="logo" href="./index.html">Sillon de <span>Vie</span></a>
+    <ul class="nav-links">
+      <li><a href="./index.html">Accueil</a></li>
+      <li><a href="./a-propos.html">À propos</a></li>
+      <li><a href="./prestations/index.html">Prestations</a></li>
+      <li><a href="./collaboration.html">Comment ça se passe</a></li>
+      <li><a href="./prestations/tarifs.html">Tarifs</a></li>
+      <li><a href="./contact/index.html" class="nav-cta">Contact</a></li>
+    </ul>
+    <div class="burger" id="burger"><span></span><span></span><span></span></div>
+  </header>
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="./index.html">Accueil</a>
+    <a href="./a-propos.html">À propos</a>
+    <a href="./prestations/index.html">Prestations</a>
+    <a href="./collaboration.html">Comment ça se passe</a>
+    <a href="./prestations/tarifs.html">Tarifs</a>
+    <a href="./contact/index.html">Contact</a>
+  </nav>
+  <script>
+    window.addEventListener('scroll', function() {
+      document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 40);
+    });
+    document.getElementById('burger').addEventListener('click', function() {
+      document.getElementById('mobile-nav').classList.toggle('open');
+    });
+  </script>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="index.html">Accueil</a><span>/</span><span>Comment ça se passe</span></div>
+      <div class="page-hero-label">La collaboration</div>
+      <h1>Comment ça se passe</h1>
+      <p class="page-hero-sub">Une biographie commence toujours par une rencontre. Voici comment nous allons cheminer ensemble, de la première conversation jusqu'au texte final.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container" style="max-width:860px;">
+
+      <div class="collab-step">
+        <div class="collab-num">01</div>
+        <div>
+          <h2>Une première rencontre sans engagement</h2>
+          <p>Confier son parcours, ses souvenirs, parfois ses joies comme ses blessures, demande de la confiance. Cette confiance ne se décrète pas, elle se construit.</p>
+          <p>C'est pourquoi je propose toujours un premier échange sans engagement — par téléphone, en visioconférence ou en présentiel. À son issue, nous décidons ensemble si nous souhaitons poursuivre l'aventure.</p>
+        </div>
+      </div>
+
+      <div class="collab-step">
+        <div class="collab-num">02</div>
+        <div>
+          <h2>Les entretiens et l'écriture</h2>
+          <p>Nos séances durent généralement entre une et deux heures. Je vous écoute, je vous pose des questions, je vous invite parfois à approfondir certains épisodes ou certaines émotions.</p>
+          <div class="collab-quote">Il n'y a ni questionnaire figé ni ordre imposé. Chaque vie possède son propre chemin.</div>
+          <p>Après chaque entretien, je retranscris, j'organise et je mets en récit ce que nous avons échangé. Pour une heure d'entretien, il faut compter entre quatre et cinq heures de travail d'écriture — le temps de construire un texte fluide, fidèle à votre voix.</p>
+        </div>
+      </div>
+
+      <div class="collab-step">
+        <div class="collab-num">03</div>
+        <div>
+          <h2>Une construction progressive, à votre rythme</h2>
+          <p>Après chaque séance, je vous transmets le texte pour que vous puissiez le relire, le corriger et compléter des souvenirs revenus entre-temps. La biographie se construit ainsi dans un dialogue permanent.</p>
+          <p>Nous pouvons travailler à votre domicile, par téléphone ou en visioconférence. La distance n'est pas un obstacle — beaucoup de récits se construisent à distance avec une qualité d'échange comparable à une rencontre physique.</p>
+        </div>
+      </div>
+
+      <div class="collab-step">
+        <div class="collab-num">04</div>
+        <div>
+          <h2>Un cadre clair pour travailler sereinement</h2>
+          <p>Lorsque nous décidons de travailler ensemble, un contrat formalise notre collaboration. Il précise notamment :</p>
+          <ul>
+            <li>Les modalités de paiement</li>
+            <li>Le rythme des rencontres</li>
+            <li>Les engagements de confidentialité</li>
+            <li>Les droits liés aux textes</li>
+            <li>Les conditions d'interruption éventuelle du projet</li>
+          </ul>
+          <div class="collab-quote">Les mots sont les miens, mais la voix reste la vôtre.</div>
+        </div>
+      </div>
+
+      <div style="background:var(--parchment); padding:3rem; text-align:center; margin-top:2rem;">
+        <div class="section-label" style="justify-content:center; display:flex;">Et maintenant ?</div>
+        <h2 style="font-size:2rem; margin-bottom:1rem;">Simplement pour voir où les mots pourraient nous mener</h2>
+        <p style="max-width:520px; margin:0 auto 2rem; font-size:.95rem; line-height:1.8; color:var(--muted);">Vous avez peut-être déjà un projet précis. Ou simplement l'intuition qu'il serait temps de raconter une partie de votre histoire. Dans les deux cas, contactez-moi pour un premier échange — sans engagement.</p>
+        <a href="contact/index.html" class="btn btn-dark">Me contacter</a>
+        <a href="prestations/tarifs.html" class="btn btn-outline" style="margin-left:1rem;">Voir les tarifs</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div style="max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+      <a class="logo" href="./index.html">Sillon de <span style="color:var(--gold-lt);">Vie</span></a>
+      <p style="font-size:.78rem; color:rgba(253,250,245,0.45);">© 2026 Éric Collenne · Biographe narrateur · Épinal, Vosges</p>
+      <nav style="display:flex; gap:1.5rem; flex-wrap:wrap;">
+        <a href="./a-propos.html" style="font-size:.75rem; color:rgba(253,250,245,0.45); text-decoration:none;">À propos</a>
+        <a href="./prestations/tarifs.html" style="font-size:.75rem; color:rgba(253,250,245,0.45); text-decoration:none;">Tarifs</a>
+        <a href="./contact/index.html" style="font-size:.75rem; color:rgba(253,250,245,0.45); text-decoration:none;">Contact</a>
+        <a href="./mentions-legales.html" style="font-size:.75rem; color:rgba(253,250,245,0.45); text-decoration:none;">Mentions légales</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
