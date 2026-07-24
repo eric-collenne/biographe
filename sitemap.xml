@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Pages principales -->
+  <url><loc>https://www.sillondevie.fr/</loc><priority>1.0</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.sillondevie.fr/a-propos.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.sillondevie.fr/collaboration.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.sillondevie.fr/mentions-legales.html</loc><priority>0.3</priority><changefreq>yearly</changefreq></url>
+
+  <!-- Prestations -->
+  <url><loc>https://www.sillondevie.fr/prestations/</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.sillondevie.fr/prestations/exploration-biographique.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.sillondevie.fr/prestations/biographie-de-vie.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.sillondevie.fr/prestations/biographie-de-couples.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.sillondevie.fr/prestations/biographie-a-deux.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.sillondevie.fr/prestations/biographie-de-naissance.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.sillondevie.fr/prestations/biographie-de-sportif.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.sillondevie.fr/prestations/biographie-de-zebre.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.sillondevie.fr/prestations/recit-aventures.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.sillondevie.fr/prestations/ecrire-pour-surmonter.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.sillondevie.fr/prestations/betalecture.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.sillondevie.fr/prestations/auto-edition.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.sillondevie.fr/prestations/tarifs.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Contact -->
+  <url><loc>https://www.sillondevie.fr/contact/</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Blog -->
+  <url><loc>https://www.sillondevie.fr/blog/2021/03/08/pomme-la-lumiere/</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://www.sillondevie.fr/blog/2021/07/16/jveux-du-soleil/</loc><priority>0.6</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://www.sillondevie.fr/blog/2022/06/08/soolking-suavemente/</loc><priority>0.6</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://www.sillondevie.fr/blog/2022/12/20/the-cure-a-forest/</loc><priority>0.6</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://www.sillondevie.fr/blog/2023/06/08/philippe-pozzo-di-borgo/</loc><priority>0.6</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://www.sillondevie.fr/blog/2024/07/19/faute-inexcusable/</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://www.sillondevie.fr/blog/2026/03/18/souffrance-au-travail-mettre-des-mots-sur-les-maux/</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+
+</urlset>
